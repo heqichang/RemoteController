@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83049F2C1C0E8DAE006CC236 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83049F2B1C0E8DAE006CC236 /* AppDelegate.m */; };
+		83049F2F1C0E8DAE006CC236 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83049F2E1C0E8DAE006CC236 /* main.m */; };
+		83049F311C0E8DAE006CC236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83049F301C0E8DAE006CC236 /* Assets.xcassets */; };
+		83049F341C0E8DAE006CC236 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83049F321C0E8DAE006CC236 /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83049F271C0E8DAE006CC236 /* RemoteController_OXServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemoteController_OXServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83049F2A1C0E8DAE006CC236 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		83049F2B1C0E8DAE006CC236 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		83049F2E1C0E8DAE006CC236 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83049F301C0E8DAE006CC236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		83049F331C0E8DAE006CC236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		83049F351C0E8DAE006CC236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83049F241C0E8DAE006CC236 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83049F1E1C0E8DAE006CC236 = {
+			isa = PBXGroup;
+			children = (
+				83049F291C0E8DAE006CC236 /* RemoteController_OXServer */,
+				83049F281C0E8DAE006CC236 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83049F281C0E8DAE006CC236 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83049F271C0E8DAE006CC236 /* RemoteController_OXServer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83049F291C0E8DAE006CC236 /* RemoteController_OXServer */ = {
+			isa = PBXGroup;
+			children = (
+				83049F2A1C0E8DAE006CC236 /* AppDelegate.h */,
+				83049F2B1C0E8DAE006CC236 /* AppDelegate.m */,
+				83049F301C0E8DAE006CC236 /* Assets.xcassets */,
+				83049F321C0E8DAE006CC236 /* MainMenu.xib */,
+				83049F351C0E8DAE006CC236 /* Info.plist */,
+				83049F2D1C0E8DAE006CC236 /* Supporting Files */,
+			);
+			path = RemoteController_OXServer;
+			sourceTree = "<group>";
+		};
+		83049F2D1C0E8DAE006CC236 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83049F2E1C0E8DAE006CC236 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83049F261C0E8DAE006CC236 /* RemoteController_OXServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83049F381C0E8DAE006CC236 /* Build configuration list for PBXNativeTarget "RemoteController_OXServer" */;
+			buildPhases = (
+				83049F231C0E8DAE006CC236 /* Sources */,
+				83049F241C0E8DAE006CC236 /* Frameworks */,
+				83049F251C0E8DAE006CC236 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RemoteController_OXServer;
+			productName = RemoteController_OXServer;
+			productReference = 83049F271C0E8DAE006CC236 /* RemoteController_OXServer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83049F1F1C0E8DAE006CC236 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = heqichang;
+				TargetAttributes = {
+					83049F261C0E8DAE006CC236 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 83049F221C0E8DAE006CC236 /* Build configuration list for PBXProject "RemoteController_OXServer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83049F1E1C0E8DAE006CC236;
+			productRefGroup = 83049F281C0E8DAE006CC236 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83049F261C0E8DAE006CC236 /* RemoteController_OXServer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83049F251C0E8DAE006CC236 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83049F311C0E8DAE006CC236 /* Assets.xcassets in Resources */,
+				83049F341C0E8DAE006CC236 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83049F231C0E8DAE006CC236 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83049F2F1C0E8DAE006CC236 /* main.m in Sources */,
+				83049F2C1C0E8DAE006CC236 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83049F321C0E8DAE006CC236 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83049F331C0E8DAE006CC236 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83049F361C0E8DAE006CC236 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		83049F371C0E8DAE006CC236 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		83049F391C0E8DAE006CC236 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RemoteController_OXServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.heqichang.RemoteController-OXServer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83049F3A1C0E8DAE006CC236 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = RemoteController_OXServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.github.heqichang.RemoteController-OXServer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83049F221C0E8DAE006CC236 /* Build configuration list for PBXProject "RemoteController_OXServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83049F361C0E8DAE006CC236 /* Debug */,
+				83049F371C0E8DAE006CC236 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83049F381C0E8DAE006CC236 /* Build configuration list for PBXNativeTarget "RemoteController_OXServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83049F391C0E8DAE006CC236 /* Debug */,
+				83049F3A1C0E8DAE006CC236 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83049F1F1C0E8DAE006CC236 /* Project object */;
+}
