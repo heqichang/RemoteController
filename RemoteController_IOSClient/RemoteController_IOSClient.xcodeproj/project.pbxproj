@@ -300,6 +300,7 @@
 				83049F5D1C0E8E23006CC236 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

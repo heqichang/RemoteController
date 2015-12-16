@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:RemoteController_IOSClient/RemoteController_IOSClient.xcodeproj">
+      location = "group:/Users/heqichang/Working/code/product/RemoteController/RemoteController_IOSClient/RemoteController_IOSClient.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:RemoteController_OXServer/RemoteController_OXServer.xcodeproj">

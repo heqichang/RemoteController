@@ -7,16 +7,21 @@
 //
 
 #import "AppDelegate.h"
+#import "RCPanelController.h"
 
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+
+@property (nonatomic, strong) RCPanelController *panel;
+
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    
+    self.panel = [[RCPanelController alloc] init];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {

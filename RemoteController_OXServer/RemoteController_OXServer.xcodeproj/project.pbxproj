@@ -11,6 +11,10 @@
 		83049F2F1C0E8DAE006CC236 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83049F2E1C0E8DAE006CC236 /* main.m */; };
 		83049F311C0E8DAE006CC236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83049F301C0E8DAE006CC236 /* Assets.xcassets */; };
 		83049F341C0E8DAE006CC236 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83049F321C0E8DAE006CC236 /* MainMenu.xib */; };
+		830FBE3A1C0FE208007C4054 /* RCPanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830FBE381C0FE208007C4054 /* RCPanelController.m */; };
+		830FBE3B1C0FE208007C4054 /* RCPanelController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830FBE391C0FE208007C4054 /* RCPanelController.xib */; };
+		83B991611C201838000DA603 /* RCPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 83B991601C201838000DA603 /* RCPanel.m */; };
+		83CEFB351C2154BD00E6C46C /* RCPanelBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CEFB341C2154BD00E6C46C /* RCPanelBackgroundView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +25,13 @@
 		83049F301C0E8DAE006CC236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83049F331C0E8DAE006CC236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		83049F351C0E8DAE006CC236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		830FBE371C0FE208007C4054 /* RCPanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCPanelController.h; sourceTree = "<group>"; };
+		830FBE381C0FE208007C4054 /* RCPanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCPanelController.m; sourceTree = "<group>"; };
+		830FBE391C0FE208007C4054 /* RCPanelController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RCPanelController.xib; sourceTree = "<group>"; };
+		83B9915F1C201838000DA603 /* RCPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCPanel.h; sourceTree = "<group>"; };
+		83B991601C201838000DA603 /* RCPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCPanel.m; sourceTree = "<group>"; };
+		83CEFB331C2154BD00E6C46C /* RCPanelBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCPanelBackgroundView.h; path = ../RCPanelBackgroundView.h; sourceTree = "<group>"; };
+		83CEFB341C2154BD00E6C46C /* RCPanelBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCPanelBackgroundView.m; path = ../RCPanelBackgroundView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +70,13 @@
 				83049F321C0E8DAE006CC236 /* MainMenu.xib */,
 				83049F351C0E8DAE006CC236 /* Info.plist */,
 				83049F2D1C0E8DAE006CC236 /* Supporting Files */,
+				830FBE371C0FE208007C4054 /* RCPanelController.h */,
+				830FBE381C0FE208007C4054 /* RCPanelController.m */,
+				830FBE391C0FE208007C4054 /* RCPanelController.xib */,
+				83B9915F1C201838000DA603 /* RCPanel.h */,
+				83B991601C201838000DA603 /* RCPanel.m */,
+				83CEFB331C2154BD00E6C46C /* RCPanelBackgroundView.h */,
+				83CEFB341C2154BD00E6C46C /* RCPanelBackgroundView.m */,
 			);
 			path = RemoteController_OXServer;
 			sourceTree = "<group>";
@@ -128,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				830FBE3B1C0FE208007C4054 /* RCPanelController.xib in Resources */,
 				83049F311C0E8DAE006CC236 /* Assets.xcassets in Resources */,
 				83049F341C0E8DAE006CC236 /* MainMenu.xib in Resources */,
 			);
@@ -141,7 +160,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83049F2F1C0E8DAE006CC236 /* main.m in Sources */,
+				83B991611C201838000DA603 /* RCPanel.m in Sources */,
 				83049F2C1C0E8DAE006CC236 /* AppDelegate.m in Sources */,
+				83CEFB351C2154BD00E6C46C /* RCPanelBackgroundView.m in Sources */,
+				830FBE3A1C0FE208007C4054 /* RCPanelController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,6 +303,7 @@
 				83049F3A1C0E8DAE006CC236 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
