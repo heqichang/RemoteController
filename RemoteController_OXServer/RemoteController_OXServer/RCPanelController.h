@@ -7,19 +7,21 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "RCDefine.h"
 
-typedef NS_ENUM(NSInteger, RCConnectStatus) {
-    RCConnect_BlueToothIsOff,
-    RCConnect_NoConnected,
-    RCConnect_Scanning,
-    RCConnect_Connected
-};
+
+@protocol RCPanelControllerDelegate <NSObject>
+
+@optional
+- (void)connectClientButtonDidClick;
+
+@end
 
 
 @interface RCPanelController : NSWindowController
 
 @property (nonatomic, assign) RCConnectStatus status;
 @property (nonatomic, assign) BOOL isPanelActive;
-
+@property (nonatomic, weak, nullable) id<RCPanelControllerDelegate> delegate;
 
 @end

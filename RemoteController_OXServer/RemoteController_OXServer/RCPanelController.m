@@ -10,11 +10,15 @@
 
 @interface RCPanelController ()<NSWindowDelegate>
 
+@property (nonatomic, assign) BOOL isConnectButtonEnabled; // 用于 Binding
+
 @property (nonatomic, strong) NSStatusItem *statusItem;
 
 @property (weak) IBOutlet NSTextField *statusLabel;
+@property (weak) IBOutlet NSButton *connectButton;
 
 - (IBAction)connectButtonDidClick:(id)sender;
+
 @end
 
 @implementation RCPanelController
@@ -28,7 +32,7 @@
         [button setImage:[NSImage imageNamed:@"Status"]];
         [button setTarget:self];
         [button setAction:@selector(toggleRCPanel:)];
-
+        
         self.isPanelActive = NO;
     }
     return self;
@@ -44,9 +48,11 @@
     [super windowDidLoad];
 }
 
-
 - (IBAction)connectButtonDidClick:(id)sender {
     
+    if ([self.delegate respondsToSelector:@selector(connectClientButtonDidClick)]) {
+        [self.delegate connectClientButtonDidClick];
+    }
     
 }
 
@@ -94,15 +100,23 @@
 - (void)setStatus:(RCConnectStatus)status {
     switch (status) {
         case RCConnect_BlueToothIsOff:
+            self.isConnectButtonEnabled = NO;
+            [self.connectButton setTitle:@"开始扫描"];
             [self.statusLabel setStringValue:@"请打开系统蓝牙"];
             break;
         case RCConnect_NoConnected:
+            self.isConnectButtonEnabled = YES;
+            [self.connectButton setTitle:@"开始扫描"];
             [self.statusLabel setStringValue:@"请开始扫描"];
             break;
         case RCConnect_Scanning:
+            self.isConnectButtonEnabled = YES;
+            [self.connectButton setTitle:@"停止扫描"];
             [self.statusLabel setStringValue:@"正在扫描"];
             break;
         case RCConnect_Connected:
+            self.isConnectButtonEnabled = NO;
+            [self.connectButton setTitle:@"开始扫描"];
             [self.statusLabel setStringValue:@"已连接上"];
             break;
         default:

@@ -10,6 +10,7 @@
 
 @implementation RCPanelBackgroundView
 
+// 用于画带箭头的背景，类似popover。（以后可以考虑直接用 popover 试试）
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
     NSRect contentRect = NSInsetRect([self bounds], 1, 1);
