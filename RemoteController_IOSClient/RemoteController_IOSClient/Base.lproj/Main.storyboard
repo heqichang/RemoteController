@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,96 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a58-v2-rOv">
+                                <rect key="frame" x="251" y="285" width="99" height="30"/>
+                                <state key="normal" title="TrackPad 开启"/>
+                                <connections>
+                                    <segue destination="A5c-R8-dHa" kind="show" identifier="showTrackPad" id="Dpx-dM-1Jh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9N-Zz-mTv">
+                                <rect key="frame" x="20" y="207" width="560" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="l9N-Zz-mTv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5sL-1W-Yjs"/>
+                            <constraint firstItem="a58-v2-rOv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DdY-p9-dXV"/>
+                            <constraint firstItem="a58-v2-rOv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DpO-R3-6Qf"/>
+                            <constraint firstItem="a58-v2-rOv" firstAttribute="top" secondItem="l9N-Zz-mTv" secondAttribute="bottom" constant="60" id="VYu-kh-sPH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l9N-Zz-mTv" secondAttribute="trailing" id="byp-u2-gPH"/>
+                            <constraint firstItem="l9N-Zz-mTv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hk5-LT-QLa"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="connectTrackPadButton" destination="a58-v2-rOv" id="AnM-z8-V4y"/>
+                        <outlet property="statusLabel" destination="l9N-Zz-mTv" id="df2-x5-7yo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="bS8-Vc-2kY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
+            <point key="canvasLocation" x="582" y="378"/>
+        </scene>
+        <!--Track View Controller-->
+        <scene sceneID="1rD-uX-uV9">
+            <objects>
+                <viewController id="A5c-R8-dHa" customClass="RCTrackViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TWX-8u-PbT"/>
+                        <viewControllerLayoutGuide type="bottom" id="fbg-2W-PKR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mxe-4k-tIs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MAj-EF-xol" customClass="RCTrackView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a05-ej-aRj">
+                                        <rect key="frame" x="8" y="20" width="30" height="30"/>
+                                        <state key="normal" title="后退"/>
+                                        <connections>
+                                            <segue destination="bS8-Vc-2kY" kind="unwind" unwindAction="unwindToSource:" id="5n0-mq-hqf"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRM-Dt-VqX">
+                                        <rect key="frame" x="8" y="58" width="584" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.64316534996032715" green="0.87842220067977905" blue="0.92527133226394653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gRM-Dt-VqX" secondAttribute="trailing" constant="8" id="9Me-jM-0Ea"/>
+                                    <constraint firstItem="a05-ej-aRj" firstAttribute="top" secondItem="MAj-EF-xol" secondAttribute="top" constant="20" id="Hh2-vU-gf2"/>
+                                    <constraint firstItem="a05-ej-aRj" firstAttribute="leading" secondItem="MAj-EF-xol" secondAttribute="leading" constant="8" id="qPW-mK-66Y"/>
+                                    <constraint firstItem="gRM-Dt-VqX" firstAttribute="leading" secondItem="MAj-EF-xol" secondAttribute="leading" constant="8" id="yyl-hE-Keb"/>
+                                    <constraint firstItem="gRM-Dt-VqX" firstAttribute="top" secondItem="a05-ej-aRj" secondAttribute="bottom" constant="8" id="yzr-6b-ZYk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="MAj-EF-xol" secondAttribute="trailing" id="GGr-fq-Df1"/>
+                            <constraint firstItem="MAj-EF-xol" firstAttribute="bottom" secondItem="Mxe-4k-tIs" secondAttribute="bottomMargin" id="RfT-Aa-9Fx"/>
+                            <constraint firstItem="MAj-EF-xol" firstAttribute="leading" secondItem="Mxe-4k-tIs" secondAttribute="leading" id="Sh4-yg-edI"/>
+                            <constraint firstItem="MAj-EF-xol" firstAttribute="top" secondItem="Mxe-4k-tIs" secondAttribute="topMargin" id="The-uR-Loe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="gRM-Dt-VqX" id="e47-HQ-YvY"/>
+                        <outlet property="trackView" destination="MAj-EF-xol" id="YwW-sH-0GD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyX-dw-5Cn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1341" y="378"/>
         </scene>
     </scenes>
 </document>

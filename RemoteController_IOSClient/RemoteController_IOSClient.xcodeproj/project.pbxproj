@@ -13,6 +13,9 @@
 		83049F521C0E8E23006CC236 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83049F501C0E8E23006CC236 /* Main.storyboard */; };
 		83049F541C0E8E23006CC236 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83049F531C0E8E23006CC236 /* Assets.xcassets */; };
 		83049F571C0E8E23006CC236 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83049F551C0E8E23006CC236 /* LaunchScreen.storyboard */; };
+		8307D4FC1C2A455E00CD0DBB /* RCBLEClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8307D4FB1C2A455E00CD0DBB /* RCBLEClient.m */; };
+		833936331C28F332002FE782 /* RCTrackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 833936321C28F332002FE782 /* RCTrackView.m */; };
+		833936391C28FE20002FE782 /* RCTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 833936381C28FE20002FE782 /* RCTrackViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,13 @@
 		83049F531C0E8E23006CC236 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83049F561C0E8E23006CC236 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83049F581C0E8E23006CC236 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8307D4FA1C2A455E00CD0DBB /* RCBLEClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBLEClient.h; sourceTree = "<group>"; };
+		8307D4FB1C2A455E00CD0DBB /* RCBLEClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBLEClient.m; sourceTree = "<group>"; };
+		8307D4FD1C2A484800CD0DBB /* RCDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDefine.h; sourceTree = "<group>"; };
+		833936311C28F332002FE782 /* RCTrackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTrackView.h; sourceTree = "<group>"; };
+		833936321C28F332002FE782 /* RCTrackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTrackView.m; sourceTree = "<group>"; };
+		833936371C28FE20002FE782 /* RCTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTrackViewController.h; sourceTree = "<group>"; };
+		833936381C28FE20002FE782 /* RCTrackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTrackViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,13 @@
 				83049F551C0E8E23006CC236 /* LaunchScreen.storyboard */,
 				83049F581C0E8E23006CC236 /* Info.plist */,
 				83049F471C0E8E23006CC236 /* Supporting Files */,
+				833936311C28F332002FE782 /* RCTrackView.h */,
+				833936321C28F332002FE782 /* RCTrackView.m */,
+				833936371C28FE20002FE782 /* RCTrackViewController.h */,
+				833936381C28FE20002FE782 /* RCTrackViewController.m */,
+				8307D4FA1C2A455E00CD0DBB /* RCBLEClient.h */,
+				8307D4FB1C2A455E00CD0DBB /* RCBLEClient.m */,
+				8307D4FD1C2A484800CD0DBB /* RCDefine.h */,
 			);
 			path = RemoteController_IOSClient;
 			sourceTree = "<group>";
@@ -150,6 +167,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83049F4F1C0E8E23006CC236 /* ViewController.m in Sources */,
+				833936391C28FE20002FE782 /* RCTrackViewController.m in Sources */,
+				833936331C28F332002FE782 /* RCTrackView.m in Sources */,
+				8307D4FC1C2A455E00CD0DBB /* RCBLEClient.m in Sources */,
 				83049F4C1C0E8E23006CC236 /* AppDelegate.m in Sources */,
 				83049F491C0E8E23006CC236 /* main.m in Sources */,
 			);
@@ -213,7 +233,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -251,7 +271,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
