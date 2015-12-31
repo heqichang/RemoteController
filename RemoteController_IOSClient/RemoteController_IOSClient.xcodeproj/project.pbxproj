@@ -32,6 +32,7 @@
 		8307D4FA1C2A455E00CD0DBB /* RCBLEClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCBLEClient.h; sourceTree = "<group>"; };
 		8307D4FB1C2A455E00CD0DBB /* RCBLEClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCBLEClient.m; sourceTree = "<group>"; };
 		8307D4FD1C2A484800CD0DBB /* RCDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCDefine.h; sourceTree = "<group>"; };
+		8332B0A21C337EDC0094BD0C /* RemoteController_IOSClient.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RemoteController_IOSClient.pch; sourceTree = "<group>"; };
 		833936311C28F332002FE782 /* RCTrackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTrackView.h; sourceTree = "<group>"; };
 		833936321C28F332002FE782 /* RCTrackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTrackView.m; sourceTree = "<group>"; };
 		833936371C28FE20002FE782 /* RCTrackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTrackViewController.h; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				83049F481C0E8E23006CC236 /* main.m */,
+				8332B0A21C337EDC0094BD0C /* RemoteController_IOSClient.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

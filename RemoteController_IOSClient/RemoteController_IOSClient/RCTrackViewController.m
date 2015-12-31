@@ -33,6 +33,8 @@ static void * const RCTrackViewControllerKVOContext = (void *)&RCTrackViewContro
     
     
     __weak RCTrackViewController *weakSelf = self;
+    
+    // 鼠标移动
     self.trackView.moveBlock = ^(NSArray *points) {
         
         if (weakSelf.BLEClient.status != RCConnect_Connected) {
@@ -54,6 +56,7 @@ static void * const RCTrackViewControllerKVOContext = (void *)&RCTrackViewContro
         [weakSelf.BLEClient sendData:data];
     };
     
+    // 单击
     self.trackView.tapBlock = ^() {
         
         if (weakSelf.BLEClient.status != RCConnect_Connected) {
@@ -66,8 +69,22 @@ static void * const RCTrackViewControllerKVOContext = (void *)&RCTrackViewContro
         [weakSelf.BLEClient sendData:data];
     };
     
+    // 双击
+    self.trackView.doubleTapBlock = ^() {
+        
+        if (weakSelf.BLEClient.status != RCConnect_Connected) {
+            return;
+        }
+        
+        NSString *s = @"[doubleTap]";
+        NSData *data = [s dataUsingEncoding:NSUTF8StringEncoding];
+        
+        [weakSelf.BLEClient sendData:data];
+    };
     
-    [self.BLEClient startAdvertisement];
+    if (self.BLEClient.status != RCConnect_Connected) {
+        [self.BLEClient startAdvertisement];
+    }
 }
 
 - (void)dealloc {

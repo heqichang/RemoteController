@@ -51,7 +51,7 @@
     NSTimeInterval executionTime = [date timeIntervalSinceDate:self.beginTime];
     
     // 单指，对于短时触摸，解释为点击
-    if ([touches count] == 1 && executionTime <= 0.15) {
+    if ([touches count] == 1 && executionTime <= 0.3) {
         return;
     }
     
@@ -94,18 +94,39 @@
     
     [super touchesEnded:touches withEvent:event];
     
-    NSDate *date = [NSDate date];
-    NSTimeInterval executionTime = [date timeIntervalSinceDate:self.beginTime];
-    
     // 这个事件中的touches不能表示当前所有的手指，只是当前移开的手指
     NSArray *eventTouch = [[event allTouches] allObjects];
     
-    // 单指
+    // 单指单击，双击判断
     if ([eventTouch count] == 1) {
-        if (executionTime < 0.15 && self.tapBlock) {
-            self.tapBlock();
+        
+        [NSObject cancelPreviousPerformRequestsWithTarget:self];
+        
+        UITouch *tapTouch = [eventTouch objectAtIndex:0];
+        NSInteger tapCouont = [tapTouch tapCount];
+        
+        if (tapCouont == 1) {
+            [self performSelector:@selector(handleSingleTap) withObject:nil afterDelay:0.3];
+        } else if (tapCouont == 2) {
+            [self handleDoubleTap];
         }
     }
 }
+
+
+#pragma mark - private
+- (void)handleSingleTap {
+    if (self.tapBlock) {
+        self.tapBlock();
+    }
+}
+
+- (void)handleDoubleTap {
+    if (self.doubleTapBlock) {
+        self.doubleTapBlock();
+    }
+}
+
+
 
 @end

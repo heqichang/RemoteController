@@ -9,6 +9,7 @@
 #import "RCGesture.h"
 @import AppKit;
 
+
 @interface RCGesture ()
 
 @property (nonatomic, assign) CGFloat maxWidth;
@@ -60,8 +61,10 @@
         if ([command hasPrefix:@"["]) {
             // 单击
             if ([command isEqualToString:@"[tap]"]) {
-                [self postMouseEventWithButton:0 withType:kCGEventLeftMouseDown andPoint:CGEventGetLocation(CGEventCreate(NULL))];
-                [self postMouseEventWithButton:0 withType:kCGEventLeftMouseUp andPoint:CGEventGetLocation(CGEventCreate(NULL))];
+                [self postMouseEventWithButton:kCGMouseButtonLeft withType:kCGEventLeftMouseDown andPoint:CGEventGetLocation(CGEventCreate(NULL))];
+                [self postMouseEventWithButton:kCGMouseButtonLeft withType:kCGEventLeftMouseUp andPoint:CGEventGetLocation(CGEventCreate(NULL))];
+            } else if ([command isEqualToString:@"[doubleTap]"]) {
+                [self postDoubleTapEvent];
             }
             
         } else {
@@ -78,7 +81,7 @@
             y = y < 0 ? 0 : y;
             y = y > self.maxHeight ? self.maxHeight : y;
             
-            [self postMouseEventWithButton:0 withType:kCGEventMouseMoved andPoint:CGPointMake(x, y)];
+            [self postMouseEventWithButton:kCGMouseButtonLeft withType:kCGEventMouseMoved andPoint:CGPointMake(x, y)];
             CFRelease(ourEvent);
         }
     }
@@ -97,12 +100,30 @@
 }
 
 #pragma mark - private
-
 - (void)postMouseEventWithButton:(CGMouseButton)b withType:(CGEventType)t andPoint:(CGPoint)p
 {
     CGEventRef theEvent = CGEventCreateMouseEvent(NULL, t, p, b);
     CGEventSetType(theEvent, t);
     CGEventPost(kCGHIDEventTap, theEvent);
+    CFRelease(theEvent);
+}
+
+- (void)postDoubleTapEvent {
+    
+    CGEventRef theEvent = CGEventCreateMouseEvent(NULL, kCGEventLeftMouseDown, CGEventGetLocation(CGEventCreate(NULL)), kCGMouseButtonLeft);
+    
+    CGEventPost(kCGHIDEventTap, theEvent);
+    CGEventSetType(theEvent, kCGEventLeftMouseUp);
+    CGEventPost(kCGHIDEventTap, theEvent);
+    
+    CGEventSetIntegerValueField(theEvent, kCGMouseEventClickState, 2);
+    
+    CGEventSetType(theEvent, kCGEventLeftMouseDown);
+    CGEventPost(kCGHIDEventTap, theEvent);
+    
+    CGEventSetType(theEvent, kCGEventLeftMouseUp);
+    CGEventPost(kCGHIDEventTap, theEvent);
+    
     CFRelease(theEvent);
 }
 

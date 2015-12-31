@@ -115,8 +115,8 @@
             [self.statusLabel setStringValue:@"正在扫描"];
             break;
         case RCConnect_Connected:
-            self.isConnectButtonEnabled = NO;
-            [self.connectButton setTitle:@"开始扫描"];
+            self.isConnectButtonEnabled = YES;
+            [self.connectButton setTitle:@"断开链接"];
             [self.statusLabel setStringValue:@"已连接上"];
             break;
         default:

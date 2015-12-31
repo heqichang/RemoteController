@@ -12,6 +12,7 @@
 
 @property (nonatomic, copy) void (^moveBlock)(NSArray *points);
 @property (nonatomic, copy) void (^tapBlock)();
+@property (nonatomic, copy) void (^doubleTapBlock)();
 @property (nonatomic, copy) void (^autoScrollingBlock)(NSString *velocity);
 
 @end

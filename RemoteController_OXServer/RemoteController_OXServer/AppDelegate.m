@@ -49,6 +49,8 @@ void *kAppContext = &kAppContext;
 - (void)connectClientButtonDidClick {
     if ([self.server status] == RCConnect_NoConnected) {
         [self.server startScan];
+    } else if ([self.server status] == RCConnect_Connected) {
+        [self.server cancelConnect];
     } else {
         [self.server stopScan];
     }
@@ -56,7 +58,7 @@ void *kAppContext = &kAppContext;
 
 #pragma mark - RCBLEServerDelegate
 - (void)ServerDidReadCommandString:(NSString *)command {
-    NSLog(@"command: %@", command);
+//    NSLog(@"command: %@", command);
     [self.gesture parseCommand:command];
 }
 

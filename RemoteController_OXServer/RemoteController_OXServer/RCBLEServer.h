@@ -28,4 +28,6 @@
 
 - (void)stopScan;
 
+- (void)cancelConnect;
+
 @end
