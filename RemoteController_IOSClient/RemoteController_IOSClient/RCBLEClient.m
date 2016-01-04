@@ -14,6 +14,7 @@
 @property (nonatomic, strong) CBPeripheralManager *peripheralManager;
 @property (nonatomic, strong) CBMutableCharacteristic *notifyCharacter;
 @property (nonatomic, strong) CBMutableCharacteristic *writeCharacter;
+@property (nonatomic, assign) BOOL isAutoAdvertisement;
 
 @end
 
@@ -34,6 +35,7 @@
 - (id)init {
     self = [super init];
     if (self) {
+        self.isAutoAdvertisement = NO;
         self.peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
     }
     return self;
@@ -61,6 +63,9 @@
 - (void)peripheralManager:(CBPeripheralManager *)peripheral central:(CBCentral *)central didUnsubscribeFromCharacteristic:(CBCharacteristic *)characteristic {
 
     self.status = RCConnect_NoConnected;
+    if (self.isAutoAdvertisement) {
+        [self startAdvertisement];
+    }
 }
 
 // 从 central 发来的信息会响应这个函数
@@ -113,6 +118,10 @@
 
 - (BOOL)sendData:(NSData *)data {
     return [self.peripheralManager updateValue:data forCharacteristic:self.notifyCharacter onSubscribedCentrals:nil];
+}
+
+- (void)isAutoAdvertisement:(BOOL)isAuto {
+    self.isAutoAdvertisement = isAuto;
 }
 
 

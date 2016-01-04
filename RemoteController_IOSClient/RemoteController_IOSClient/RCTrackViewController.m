@@ -29,6 +29,7 @@ static void * const RCTrackViewControllerKVOContext = (void *)&RCTrackViewContro
     
     self.BLEClient = [RCBLEClient sharedInstance];
     [self changeStatus:self.BLEClient.status];
+    [self.BLEClient isAutoAdvertisement:YES];
     [self.BLEClient addObserver:self forKeyPath:@"status" options:NSKeyValueObservingOptionNew context:RCTrackViewControllerKVOContext];
     
     

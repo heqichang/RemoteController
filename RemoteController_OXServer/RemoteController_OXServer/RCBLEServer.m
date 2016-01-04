@@ -19,6 +19,7 @@ static NSString * const kRCWriteCharacteristicUUID = @"D20A441C-8B54-41B6-AD19-8
 @property (nonatomic, strong) CBPeripheral *peripheral;
 @property (nonatomic, strong) CBCharacteristic *notifyCharacteristic;
 @property (nonatomic, strong) CBCharacteristic *writeCharacteristic;
+@property (nonatomic, strong) NSUUID *latestConnectedDeviceUUID;
 @property (nonatomic, assign) BOOL autoScan; // 用于判断是否手动关闭链接
 
 @end
@@ -81,7 +82,7 @@ static NSString * const kRCWriteCharacteristicUUID = @"D20A441C-8B54-41B6-AD19-8
     self.status = RCConnect_Connected;
     
     [self.peripheral setDelegate:self];
-    
+    self.latestConnectedDeviceUUID = self.peripheral.identifier;
     // 寻找 service
     CBUUID *serviceUUID = [CBUUID UUIDWithString:kRCServiceUUID];
     [self.peripheral discoverServices:@[serviceUUID]];
@@ -92,9 +93,13 @@ static NSString * const kRCWriteCharacteristicUUID = @"D20A441C-8B54-41B6-AD19-8
     
     // 蓝牙有时会自动断开，也可能是手动关闭手机蓝牙
     self.status = RCConnect_NoConnected;
-    
-    self.peripheral = nil;
-    
+
+
+    if (self.peripheral) {
+        [self.peripheral setDelegate:nil];
+        self.peripheral = nil;
+    }
+
     // 重新开始 scan
     if (self.autoScan) {
         [self startScan];
@@ -172,6 +177,11 @@ static NSString * const kRCWriteCharacteristicUUID = @"D20A441C-8B54-41B6-AD19-8
 }
 
 #pragma mark - private
+
+- (void)reconnect {
+    [self.centralManager connectPeripheral:self.peripheral options:nil];
+}
+
 
 - (void)cleanup {
     

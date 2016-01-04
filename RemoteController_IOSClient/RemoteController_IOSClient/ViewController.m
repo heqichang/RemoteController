@@ -41,6 +41,7 @@ static void * const ViewControllerKVOContext = (void *)&ViewControllerKVOContext
 
 - (IBAction)unwindToSource:(UIStoryboardSegue*)sender {
     // 发送关闭信息，Unsubscribe
+    [self.BLEClient isAutoAdvertisement:NO];
     [self.BLEClient sendData:[@"[EOM]" dataUsingEncoding:NSUTF8StringEncoding]];
     [self.BLEClient stopAdvertisement];
 }

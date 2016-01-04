@@ -18,5 +18,6 @@
 - (void)startAdvertisement;
 - (void)stopAdvertisement;
 - (BOOL)sendData:(NSData *)data;
+- (void)isAutoAdvertisement:(BOOL)isAuto;
 
 @end
